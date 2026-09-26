@@ -23,6 +23,9 @@ import os
 import sys
 import tempfile
 
+# --- Custom Constants From Fork ---
+AUTOMATIC_PLAYLIST_PREFIX = "~_"
+
 # --- Task Status Constants ---
 # A task starts, runs, and ends. Five values, one vocabulary, no others.
 TASK_STATUS_NEW = 'NEW'

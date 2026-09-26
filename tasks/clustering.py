@@ -86,6 +86,7 @@ from config import (
     TASK_STATUS_SUCCESS,
     TASK_STATUS_FAILURE,
     TASK_STATUS_REVOKED,
+    AUTOMATIC_PLAYLIST_PREFIX,
 )
 
 from error import error_manager
@@ -1724,7 +1725,7 @@ def _name_and_prepare_playlists(
         assigned_names.add(final_name)
         used_playlist_names.append(final_name)
 
-        base_name = f"{final_name}_automatic"
+        base_name = f"{AUTOMATIC_PLAYLIST_PREFIX}{final_name}_automatic"
         shuffled = _shuffle_playlist_songs(songs, base_name)
         _assign_playlist_chunks(shuffled, max_songs, base_name, final_playlists)
 
