@@ -24,7 +24,7 @@ import sys
 import tempfile
 
 # --- Custom Constants From Fork ---
-AUTOMATIC_PLAYLIST_PREFIX = "~ "
+AUTOMATIC_PLAYLIST_PREFIX = os.getenv("AUTOMATIC_PLAYLIST_PREFIX", "~")
 
 # --- Task Status Constants ---
 # A task starts, runs, and ends. Five values, one vocabulary, no others.
